@@ -8,6 +8,3 @@ dist/
 !.env.example
 .wrangler/
 *.tsbuildinfo
-
-# Source schedule data
-rozklad_2026-2027.json
