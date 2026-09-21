@@ -17,10 +17,12 @@ const HOLIDAY_START = '2026-10-26'
 const HOLIDAY_END = '2026-10-30'
 const WEEK_DAYS: Record<DayKey, number> = { пн: 1, вт: 2, ср: 3, чт: 4, пт: 5 }
 const BELL_TIMES = ['08:30', '09:25', '10:30', '11:35', '12:35', '13:35', '14:30', '15:25']
+const BELL_END_TIMES = ['09:15', '10:10', '11:15', '12:20', '13:20', '14:20', '15:15', '16:10']
+const BREAK_MINUTES = [10, 20, 20, 15, 15, 15, 10]
 const WEEK_STARTS = ['2026-09-01', ...Array.from({ length: 15 }, (_, index) => {
   const date = new Date(Date.UTC(2026, 8, 7 + index * 7))
   return date.toISOString().slice(0, 10)
-})].filter((weekStart) => weekStart !== HOLIDAY_START)
+})]
 
 function addMinutes(time: string, minutes: number) {
   const [hours, minute] = time.split(':').map(Number)
@@ -48,6 +50,29 @@ function isLessonInWeek(lesson: Lesson, weekType: 'A' | 'B') {
   return !lesson.week || lesson.week === weekType
 }
 
+function weekTypeFor(weekStart: string): 'A' | 'B' | null {
+  if (weekStart === HOLIDAY_START) return null
+  const activeWeeksBefore = WEEK_STARTS.filter((start) => start < weekStart && start !== HOLIDAY_START).length
+  return activeWeeksBefore % 2 === 0 ? 'A' : 'B'
+}
+
+function dayDate(weekStart: string, day: DayKey) {
+  const date = new Date(`${weekStart}T12:00:00Z`)
+  const offset = weekStart === SEMESTER_START ? WEEK_DAYS[day] - 2 : WEEK_DAYS[day] - 1
+  date.setUTCDate(date.getUTCDate() + offset)
+  const value = dateValue(date)
+  return value >= SEMESTER_START && value <= SEMESTER_END ? date : null
+}
+
+function dayDateLabel(date: Date | null) {
+  return date ? new Intl.DateTimeFormat('uk-UA', { day: '2-digit', month: '2-digit' }).format(date) : '—'
+}
+
+function lessonTimeRange(lesson: Lesson) {
+  const start = BELL_TIMES[lesson.lesson - 1]
+  return `${start}–${addMinutes(start, lessonDuration(lesson.classes))}`
+}
+
 function weekRangeLabel(weekStart: string) {
   const start = new Date(`${weekStart}T12:00:00Z`)
   const end = new Date(start)
@@ -68,9 +93,8 @@ function createEvents(teacher: Teacher): CalendarEvent[] {
     const endTime = addMinutes(startTime, lessonDuration(lesson.classes))
     while (classDate <= end) {
       const date = dateValue(classDate)
-      const weekIndex = WEEK_STARTS.findIndex((weekStart) => date >= weekStart && date <= `${weekStart === SEMESTER_START ? '2026-09-04' : dateValue(new Date(new Date(`${weekStart}T12:00:00Z`).getTime() + 4 * 86_400_000))}`)
-      const weekType = weekIndex % 2 === 0 ? 'A' : 'B'
-      if (!isHoliday(classDate) && isLessonInWeek(lesson, weekType)) {
+      const weekType = weekTypeFor(WEEK_STARTS.find((weekStart) => date >= weekStart && date <= dateValue(new Date(new Date(`${weekStart}T12:00:00Z`).getTime() + (weekStart === SEMESTER_START ? 3 : 4) * 86_400_000))) ?? SEMESTER_START)
+      if (!isHoliday(classDate) && weekType && isLessonInWeek(lesson, weekType)) {
         events.push({
           summary: `${lesson.subject} · ${lesson.classes}${lesson.group ? ` (${lesson.group})` : ''}`,
           description: [`Викладач: ${teacher.name}`, `Урок ${lesson.lesson}`, `Тривалість: ${lessonDuration(lesson.classes)} хв`, lesson.room ? `Кабінет: ${lesson.room}` : null, lesson.week ? `Тиждень: ${lesson.week === 'A' ? 'чисельник' : 'знаменник'}` : null].filter(Boolean).join('\n'),
@@ -89,6 +113,7 @@ function LessonCard({ lesson }: { lesson: Lesson }) {
     <article className="lesson-card">
       <strong>{lesson.subject}</strong>
       <span>{lesson.classes}{lesson.group ? ` · ${lesson.group}` : ''}</span>
+      <small className="lesson-time-range">{lessonTimeRange(lesson)} · {lessonDuration(lesson.classes)} хв</small>
       {(lesson.room || lesson.week) && <small>{[lesson.room && `каб. ${lesson.room}`, lesson.week === 'A' ? 'чисельник' : lesson.week === 'B' ? 'знаменник' : null].filter(Boolean).join(' · ')}</small>}
     </article>
   )
@@ -96,18 +121,18 @@ function LessonCard({ lesson }: { lesson: Lesson }) {
 
 export function App() {
   const data = scheduleData as ScheduleData
-  const [teacherName, setTeacherName] = useState('')
+  const sortedTeachers = [...data.teachers].sort((first, second) => first.name.localeCompare(second.name, 'uk'))
+  const [teacherName, setTeacherName] = useState(sortedTeachers[0]?.name ?? '')
   const [calendarOpen, setCalendarOpen] = useState(false)
   const [gmail, setGmail] = useState('')
   const [weekIndex, setWeekIndex] = useState(0)
   const [status, setStatus] = useState('')
 
-  useEffect(() => setTeacherName(data.teachers[0]?.name ?? ''), [data.teachers])
-
   const teacher = data?.teachers.find((item) => item.name === teacherName)
-  const sortedTeachers = [...data.teachers].sort((first, second) => first.name.localeCompare(second.name, 'uk'))
-  const weekType = weekIndex % 2 === 0 ? 'A' : 'B'
-  const lessons = (teacher?.lessons ?? []).filter((lesson) => isLessonInWeek(lesson, weekType))
+  const weekStart = WEEK_STARTS[weekIndex]
+  const weekType = weekTypeFor(weekStart)
+  const isVacationWeek = weekStart === HOLIDAY_START
+  const lessons = weekType ? (teacher?.lessons ?? []).filter((lesson) => isLessonInWeek(lesson, weekType)) : []
   const totalEvents = teacher ? createEvents(teacher).length : 0
 
   function beginCalendarImport(event: React.FormEvent) {
@@ -155,14 +180,15 @@ export function App() {
         </label>
       </section>
       <section className="schedule-section" aria-label="Тижневий розклад">
-        <div className="schedule-toolbar"><p><Clock3 size={17} /> Уроки 1–8</p><div className="toolbar-actions"><div className="week-navigation"><button type="button" aria-label="Попередній тиждень" disabled={weekIndex === 0} onClick={() => setWeekIndex((index) => index - 1)}><ChevronLeft size={18} /></button><p><CalendarDays size={16} /><span>{weekRangeLabel(WEEK_STARTS[weekIndex])}</span><strong className={weekType === 'A' ? 'numerator' : 'denominator'}>{weekType === 'A' ? 'чисельник' : 'знаменник'}</strong></p><button type="button" aria-label="Наступний тиждень" disabled={weekIndex === WEEK_STARTS.length - 1} onClick={() => setWeekIndex((index) => index + 1)}><ChevronRight size={18} /></button></div><button type="button" onClick={() => { setStatus(''); setCalendarOpen(true) }}><CalendarPlus size={18} /> Додати в Google Calendar</button></div></div>
+        <div className="schedule-toolbar"><p><Clock3 size={17} /> Уроки 1–8</p><div className="toolbar-actions"><div className="week-navigation"><button type="button" aria-label="Попередній тиждень" disabled={weekIndex === 0} onClick={() => setWeekIndex((index) => index - 1)}><ChevronLeft size={18} /></button><p><CalendarDays size={16} /><span>{weekRangeLabel(weekStart)}</span>{weekType && <strong className={weekType === 'A' ? 'numerator' : 'denominator'}>{weekType === 'A' ? 'чисельник' : 'знаменник'}</strong>}{isVacationWeek && <strong className="vacation-badge">канікули</strong>}</p><button type="button" aria-label="Наступний тиждень" disabled={weekIndex === WEEK_STARTS.length - 1} onClick={() => setWeekIndex((index) => index + 1)}><ChevronRight size={18} /></button></div><button type="button" onClick={() => { setStatus(''); setCalendarOpen(true) }}><CalendarPlus size={18} /> Додати в Google Calendar</button></div></div>
         <div className="schedule-wrap"><div className="schedule-grid">
-          <div className="corner">Урок</div>{DAYS.map((day) => <div className="day-heading" key={day.key}>{day.label}</div>)}
+          <div className="corner">Урок</div><div className="corner time-heading">Час</div>{DAYS.map((day) => <div className="day-heading" key={day.key}><span>{day.label}</span><small>{dayDateLabel(dayDate(weekStart, day.key))}</small></div>)}
           {Array.from({ length: 8 }, (_, index) => index + 1).flatMap((number) => [
             <div className="lesson-number" key={`number-${number}`}>{number}</div>,
+            <div className="lesson-time" key={`time-${number}`}><strong>{BELL_TIMES[number - 1]}</strong><span>{BELL_END_TIMES[number - 1]}</span>{number < 8 && <small className="break-guide">{BREAK_MINUTES[number - 1]} хв перерва</small>}</div>,
             ...DAYS.map((day) => <div className="schedule-cell" key={`${day.key}-${number}`}>{lessons.filter((lesson) => lesson.day === day.key && lesson.lesson === number).map((lesson, index) => <LessonCard key={`${lesson.raw}-${index}`} lesson={lesson} />)}</div>),
           ])}
-        </div></div>
+        </div>{isVacationWeek && <div className="holiday-overlay"><CalendarDays size={30} /><strong>Канікули</strong><span>26–30 жовтня</span></div>}</div>
       </section>
       {status && <p className="notice" role="status">{status}</p>}
       {calendarOpen && <div className="modal-backdrop" role="presentation"><section className="calendar-modal" role="dialog" aria-modal="true" aria-labelledby="calendar-title">
