@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { CalendarPlus, ChevronDown, Clock3, GraduationCap, Mail, X } from 'lucide-react'
+import { CalendarDays, CalendarPlus, ChevronDown, ChevronLeft, ChevronRight, Clock3, GraduationCap, Mail, X } from 'lucide-react'
 import scheduleData from '../rozklad_2026-2027.json'
 import type { CalendarEvent, DayKey, Lesson, ScheduleData, Teacher } from './types'
 
@@ -16,6 +16,11 @@ const SEMESTER_END = '2026-12-18'
 const HOLIDAY_START = '2026-10-26'
 const HOLIDAY_END = '2026-10-30'
 const WEEK_DAYS: Record<DayKey, number> = { пн: 1, вт: 2, ср: 3, чт: 4, пт: 5 }
+const BELL_TIMES = ['08:30', '09:25', '10:30', '11:35', '12:35', '13:35', '14:30', '15:25']
+const WEEK_STARTS = ['2026-09-01', ...Array.from({ length: 15 }, (_, index) => {
+  const date = new Date(Date.UTC(2026, 8, 7 + index * 7))
+  return date.toISOString().slice(0, 10)
+})].filter((weekStart) => weekStart !== HOLIDAY_START)
 
 function addMinutes(time: string, minutes: number) {
   const [hours, minute] = time.split(':').map(Number)
@@ -23,36 +28,57 @@ function addMinutes(time: string, minutes: number) {
   return `${String(Math.floor(total / 60)).padStart(2, '0')}:${String(total % 60).padStart(2, '0')}`
 }
 
-function slotTime(slot: number, firstLesson: string, lessonMinutes: number, breakMinutes: number) {
-  return addMinutes(firstLesson, (slot - 1) * (lessonMinutes + breakMinutes))
+function lessonDuration(classes: string) {
+  const grades = [...classes.matchAll(/\b(\d{1,2})\s*-/g)].map((match) => Number(match[1]))
+  if (grades.includes(1)) return 35
+  if (grades.some((grade) => grade >= 2 && grade <= 4)) return 40
+  return 45
+}
+
+function dateValue(date: Date) {
+  return date.toISOString().slice(0, 10)
 }
 
 function isHoliday(date: Date) {
-  const value = date.toISOString().slice(0, 10)
+  const value = dateValue(date)
   return value >= HOLIDAY_START && value <= HOLIDAY_END
 }
 
-function createEvents(teacher: Teacher, firstLesson: string, lessonMinutes: number, breakMinutes: number): CalendarEvent[] {
+function isLessonInWeek(lesson: Lesson, weekType: 'A' | 'B') {
+  return !lesson.week || lesson.week === weekType
+}
+
+function weekRangeLabel(weekStart: string) {
+  const start = new Date(`${weekStart}T12:00:00Z`)
+  const end = new Date(start)
+  end.setUTCDate(end.getUTCDate() + (weekStart === SEMESTER_START ? 3 : 4))
+  const format = new Intl.DateTimeFormat('uk-UA', { day: '2-digit', month: 'short' })
+  return `${format.format(start)} – ${format.format(end)}`
+}
+
+function createEvents(teacher: Teacher): CalendarEvent[] {
   const events: CalendarEvent[] = []
-  const start = new Date(`${SEMESTER_START}T12:00:00`)
-  const end = new Date(`${SEMESTER_END}T12:00:00`)
+  const start = new Date(`${SEMESTER_START}T12:00:00Z`)
+  const end = new Date(`${SEMESTER_END}T12:00:00Z`)
 
   for (const lesson of teacher.lessons) {
     const classDate = new Date(start)
-    classDate.setDate(start.getDate() + ((WEEK_DAYS[lesson.day] - start.getDay() + 7) % 7))
-    const startTime = slotTime(lesson.lesson, firstLesson, lessonMinutes, breakMinutes)
-    const endTime = addMinutes(startTime, lessonMinutes)
+    classDate.setUTCDate(start.getUTCDate() + ((WEEK_DAYS[lesson.day] - start.getUTCDay() + 7) % 7))
+    const startTime = BELL_TIMES[lesson.lesson - 1]
+    const endTime = addMinutes(startTime, lessonDuration(lesson.classes))
     while (classDate <= end) {
-      if (!isHoliday(classDate)) {
-        const date = classDate.toISOString().slice(0, 10)
+      const date = dateValue(classDate)
+      const weekIndex = WEEK_STARTS.findIndex((weekStart) => date >= weekStart && date <= `${weekStart === SEMESTER_START ? '2026-09-04' : dateValue(new Date(new Date(`${weekStart}T12:00:00Z`).getTime() + 4 * 86_400_000))}`)
+      const weekType = weekIndex % 2 === 0 ? 'A' : 'B'
+      if (!isHoliday(classDate) && isLessonInWeek(lesson, weekType)) {
         events.push({
           summary: `${lesson.subject} · ${lesson.classes}${lesson.group ? ` (${lesson.group})` : ''}`,
-          description: [`Викладач: ${teacher.name}`, `Урок ${lesson.lesson}`, lesson.room ? `Кабінет: ${lesson.room}` : null, lesson.week ? `Тиждень: ${lesson.week}` : null].filter(Boolean).join('\n'),
+          description: [`Викладач: ${teacher.name}`, `Урок ${lesson.lesson}`, `Тривалість: ${lessonDuration(lesson.classes)} хв`, lesson.room ? `Кабінет: ${lesson.room}` : null, lesson.week ? `Тиждень: ${lesson.week === 'A' ? 'чисельник' : 'знаменник'}` : null].filter(Boolean).join('\n'),
           start: `${date}T${startTime}:00+03:00`,
           end: `${date}T${endTime}:00+03:00`,
         })
       }
-      classDate.setDate(classDate.getDate() + 7)
+      classDate.setUTCDate(classDate.getUTCDate() + 7)
     }
   }
   return events
@@ -63,7 +89,7 @@ function LessonCard({ lesson }: { lesson: Lesson }) {
     <article className="lesson-card">
       <strong>{lesson.subject}</strong>
       <span>{lesson.classes}{lesson.group ? ` · ${lesson.group}` : ''}</span>
-      {(lesson.room || lesson.week) && <small>{[lesson.room && `каб. ${lesson.room}`, lesson.week].filter(Boolean).join(' · ')}</small>}
+      {(lesson.room || lesson.week) && <small>{[lesson.room && `каб. ${lesson.room}`, lesson.week === 'A' ? 'чисельник' : lesson.week === 'B' ? 'знаменник' : null].filter(Boolean).join(' · ')}</small>}
     </article>
   )
 }
@@ -73,16 +99,16 @@ export function App() {
   const [teacherName, setTeacherName] = useState('')
   const [calendarOpen, setCalendarOpen] = useState(false)
   const [gmail, setGmail] = useState('')
-  const [firstLesson, setFirstLesson] = useState('08:30')
-  const [lessonMinutes, setLessonMinutes] = useState(45)
-  const [breakMinutes, setBreakMinutes] = useState(10)
+  const [weekIndex, setWeekIndex] = useState(0)
   const [status, setStatus] = useState('')
 
   useEffect(() => setTeacherName(data.teachers[0]?.name ?? ''), [data.teachers])
 
   const teacher = data?.teachers.find((item) => item.name === teacherName)
-  const lessons = teacher?.lessons ?? []
-  const totalEvents = teacher ? createEvents(teacher, firstLesson, lessonMinutes, breakMinutes).length : 0
+  const sortedTeachers = [...data.teachers].sort((first, second) => first.name.localeCompare(second.name, 'uk'))
+  const weekType = weekIndex % 2 === 0 ? 'A' : 'B'
+  const lessons = (teacher?.lessons ?? []).filter((lesson) => isLessonInWeek(lesson, weekType))
+  const totalEvents = teacher ? createEvents(teacher).length : 0
 
   function beginCalendarImport(event: React.FormEvent) {
     event.preventDefault()
@@ -90,7 +116,7 @@ export function App() {
       setStatus('Введіть адресу Gmail, до якої має бути надано доступ.')
       return
     }
-    const events = createEvents(teacher, firstLesson, lessonMinutes, breakMinutes)
+    const events = createEvents(teacher)
     sessionStorage.setItem('calendar-events', JSON.stringify(events))
     sessionStorage.setItem('calendar-email', gmail)
     window.location.assign('/api/auth/google')
@@ -125,11 +151,11 @@ export function App() {
         </div>
         <label className="teacher-select">
           <span>Викладач</span>
-          <div><select value={teacherName} onChange={(event) => setTeacherName(event.target.value)}>{data.teachers.map((item) => <option key={item.name}>{item.name}</option>)}</select><ChevronDown size={18} /></div>
+          <div><select value={teacherName} onChange={(event) => setTeacherName(event.target.value)}>{sortedTeachers.map((item) => <option key={item.name}>{item.name}</option>)}</select><ChevronDown size={18} /></div>
         </label>
       </section>
       <section className="schedule-section" aria-label="Тижневий розклад">
-        <div className="schedule-toolbar"><p><Clock3 size={17} /> Уроки 1–8</p><button type="button" onClick={() => { setStatus(''); setCalendarOpen(true) }}><CalendarPlus size={18} /> Додати в Google Calendar</button></div>
+        <div className="schedule-toolbar"><p><Clock3 size={17} /> Уроки 1–8</p><div className="toolbar-actions"><div className="week-navigation"><button type="button" aria-label="Попередній тиждень" disabled={weekIndex === 0} onClick={() => setWeekIndex((index) => index - 1)}><ChevronLeft size={18} /></button><p><CalendarDays size={16} /><span>{weekRangeLabel(WEEK_STARTS[weekIndex])}</span><strong className={weekType === 'A' ? 'numerator' : 'denominator'}>{weekType === 'A' ? 'чисельник' : 'знаменник'}</strong></p><button type="button" aria-label="Наступний тиждень" disabled={weekIndex === WEEK_STARTS.length - 1} onClick={() => setWeekIndex((index) => index + 1)}><ChevronRight size={18} /></button></div><button type="button" onClick={() => { setStatus(''); setCalendarOpen(true) }}><CalendarPlus size={18} /> Додати в Google Calendar</button></div></div>
         <div className="schedule-wrap"><div className="schedule-grid">
           <div className="corner">Урок</div>{DAYS.map((day) => <div className="day-heading" key={day.key}>{day.label}</div>)}
           {Array.from({ length: 8 }, (_, index) => index + 1).flatMap((number) => [
@@ -142,10 +168,9 @@ export function App() {
       {calendarOpen && <div className="modal-backdrop" role="presentation"><section className="calendar-modal" role="dialog" aria-modal="true" aria-labelledby="calendar-title">
         <button className="close" onClick={() => setCalendarOpen(false)} aria-label="Закрити"><X size={20} /></button>
         <Mail className="modal-icon" size={25} /><p className="eyebrow">Google Calendar</p><h2 id="calendar-title">Додати уроки до календаря</h2>
-        <p>Ви підтвердите доступ у своєму обліковому записі Google. Ми створимо {totalEvents} подій на період 01.09–18.12.2026, крім канікул 26–30 жовтня.</p>
+        <p>Ви підтвердите доступ у своєму обліковому записі Google. Ми створимо {totalEvents} подій на період 01.09–18.12.2026, крім канікул 26–30 жовтня. Час початку взято з розкладу дзвінків; тривалість залежить від класу.</p>
         <form onSubmit={beginCalendarImport}>
           <label>Адреса Gmail<input type="email" required value={gmail} placeholder="name@gmail.com" onChange={(event) => setGmail(event.target.value)} /></label>
-          <div className="time-settings"><label>Перший урок<input type="time" value={firstLesson} onChange={(event) => setFirstLesson(event.target.value)} /></label><label>Тривалість, хв<input type="number" min="30" max="90" value={lessonMinutes} onChange={(event) => setLessonMinutes(Number(event.target.value))} /></label><label>Перерва, хв<input type="number" min="0" max="45" value={breakMinutes} onChange={(event) => setBreakMinutes(Number(event.target.value))} /></label></div>
           <button className="confirm" type="submit">Продовжити з Google <CalendarPlus size={18} /></button>
         </form>
       </section></div>}
