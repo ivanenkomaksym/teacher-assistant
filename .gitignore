@@ -1,0 +1,13 @@
+# Dependencies and build output
+node_modules/
+dist/
+
+# Local environment and tool files
+.env
+.env.*
+!.env.example
+.wrangler/
+*.tsbuildinfo
+
+# Source schedule data
+rozklad_2026-2027.json
