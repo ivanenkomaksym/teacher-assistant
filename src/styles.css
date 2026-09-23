@@ -30,3 +30,38 @@ button { cursor: pointer; }
 .holiday-overlay { position: absolute; top: 48px; right: 0; bottom: 0; left: 133px; display: grid; place-content: center; justify-items: center; gap: 8px; background: rgba(238, 246, 239, .92); color: #39706a; text-align: center; }
 .holiday-overlay strong { font-family: 'PT Serif', serif; font-size: 28px; }
 .holiday-overlay span { color: #668078; font-size: 13px; font-weight: 700; }
+.week-legend { display: flex; align-items: center; gap: 12px; color: #536d66; font-size: 11px; font-weight: 800; white-space: nowrap; }
+.week-legend span { display: inline-flex; align-items: center; gap: 5px; }
+.legend-swatch { width: 9px; height: 9px; display: inline-block; border-radius: 50%; }
+.numerator-swatch { background: #2b8a5a; }
+.denominator-swatch { background: #bd5428; }
+.lesson-card { font-size: 13px; }
+.lesson-card strong { font-size: 13px; }
+.lesson-card span { font-size: 12px; }
+.lesson-card small { font-size: 11px; }
+.numerator-lesson { border-left-color: #2b8a5a; background: #e4f3e8; }
+.numerator-lesson strong { color: #17613b; }
+.denominator-lesson { border-left-color: #bd5428; background: #fff0dc; }
+.denominator-lesson strong { color: #893b1e; }
+.regular-lesson { border-left-color: #688b83; background: #eaf1ed; }
+.regular-lesson strong { color: #2c5d55; }
+@media (max-width: 680px) {
+	.topbar { height: 62px; }
+	.brand { font-size: 19px; }
+	.intro { padding-top: 30px; }
+	.intro h1 { font-size: 34px; }
+	.intro p:not(.eyebrow) { font-size: 14px; }
+	.schedule-section { padding-right: 12px; padding-left: 12px; }
+	.schedule-wrap { margin-right: -4px; border-right: 0; border-left: 0; border-radius: 0; box-shadow: 0 8px 22px rgba(25, 70, 57, .1); }
+	.schedule-grid { min-width: 1040px; }
+	.schedule-toolbar > p { font-size: 14px; }
+	.toolbar-actions { gap: 9px; }
+	.week-navigation { width: 100%; }
+	.week-navigation p { flex: 1; justify-content: center; font-size: 12px; }
+	.week-legend { justify-content: center; font-size: 10px; }
+	.toolbar-actions > button { min-height: 46px; font-size: 12px; }
+	.day-heading { font-size: 13px; }
+	.day-heading small { font-size: 12px; }
+	.lesson-card { padding: 8px 9px; font-size: 13px; }
+	.lesson-card strong { font-size: 13px; }
+}

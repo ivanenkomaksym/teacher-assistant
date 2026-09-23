@@ -50,6 +50,17 @@ function isLessonInWeek(lesson: Lesson, weekType: 'A' | 'B') {
   return !lesson.week || lesson.week === weekType
 }
 
+function defaultWeekIndex() {
+  const today = dateValue(new Date())
+  const index = WEEK_STARTS.findIndex((weekStart, weekIndex) => {
+    const end = new Date(`${weekStart}T12:00:00Z`)
+    end.setUTCDate(end.getUTCDate() + (weekIndex === 0 ? 3 : 4))
+    return today >= weekStart && today <= dateValue(end)
+  })
+  if (index >= 0) return index
+  return today < SEMESTER_START ? 0 : WEEK_STARTS.length - 1
+}
+
 function weekTypeFor(weekStart: string): 'A' | 'B' | null {
   if (weekStart === HOLIDAY_START) return null
   const activeWeeksBefore = WEEK_STARTS.filter((start) => start < weekStart && start !== HOLIDAY_START).length
@@ -66,11 +77,6 @@ function dayDate(weekStart: string, day: DayKey) {
 
 function dayDateLabel(date: Date | null) {
   return date ? new Intl.DateTimeFormat('uk-UA', { day: '2-digit', month: '2-digit' }).format(date) : '—'
-}
-
-function lessonTimeRange(lesson: Lesson) {
-  const start = BELL_TIMES[lesson.lesson - 1]
-  return `${start}–${addMinutes(start, lessonDuration(lesson.classes))}`
 }
 
 function weekRangeLabel(weekStart: string) {
@@ -110,10 +116,9 @@ function createEvents(teacher: Teacher): CalendarEvent[] {
 
 function LessonCard({ lesson }: { lesson: Lesson }) {
   return (
-    <article className="lesson-card">
+    <article className={`lesson-card ${lesson.week === 'A' ? 'numerator-lesson' : lesson.week === 'B' ? 'denominator-lesson' : 'regular-lesson'}`}>
       <strong>{lesson.subject}</strong>
       <span>{lesson.classes}{lesson.group ? ` · ${lesson.group}` : ''}</span>
-      <small className="lesson-time-range">{lessonTimeRange(lesson)} · {lessonDuration(lesson.classes)} хв</small>
       {(lesson.room || lesson.week) && <small>{[lesson.room && `каб. ${lesson.room}`, lesson.week === 'A' ? 'чисельник' : lesson.week === 'B' ? 'знаменник' : null].filter(Boolean).join(' · ')}</small>}
     </article>
   )
@@ -125,7 +130,7 @@ export function App() {
   const [teacherName, setTeacherName] = useState(sortedTeachers[0]?.name ?? '')
   const [calendarOpen, setCalendarOpen] = useState(false)
   const [gmail, setGmail] = useState('')
-  const [weekIndex, setWeekIndex] = useState(0)
+  const [weekIndex, setWeekIndex] = useState(defaultWeekIndex)
   const [status, setStatus] = useState('')
 
   const teacher = data?.teachers.find((item) => item.name === teacherName)
@@ -180,7 +185,7 @@ export function App() {
         </label>
       </section>
       <section className="schedule-section" aria-label="Тижневий розклад">
-        <div className="schedule-toolbar"><p><Clock3 size={17} /> Уроки 1–8</p><div className="toolbar-actions"><div className="week-navigation"><button type="button" aria-label="Попередній тиждень" disabled={weekIndex === 0} onClick={() => setWeekIndex((index) => index - 1)}><ChevronLeft size={18} /></button><p><CalendarDays size={16} /><span>{weekRangeLabel(weekStart)}</span>{weekType && <strong className={weekType === 'A' ? 'numerator' : 'denominator'}>{weekType === 'A' ? 'чисельник' : 'знаменник'}</strong>}{isVacationWeek && <strong className="vacation-badge">канікули</strong>}</p><button type="button" aria-label="Наступний тиждень" disabled={weekIndex === WEEK_STARTS.length - 1} onClick={() => setWeekIndex((index) => index + 1)}><ChevronRight size={18} /></button></div><button type="button" onClick={() => { setStatus(''); setCalendarOpen(true) }}><CalendarPlus size={18} /> Додати в Google Calendar</button></div></div>
+        <div className="schedule-toolbar"><p><Clock3 size={17} /> Уроки 1–8</p><div className="toolbar-actions"><div className="week-navigation"><button type="button" aria-label="Попередній тиждень" disabled={weekIndex === 0} onClick={() => setWeekIndex((index) => index - 1)}><ChevronLeft size={18} /></button><p><CalendarDays size={16} /><span>{weekRangeLabel(weekStart)}</span>{weekType && <strong className={weekType === 'A' ? 'numerator' : 'denominator'}>{weekType === 'A' ? 'чисельник' : 'знаменник'}</strong>}{isVacationWeek && <strong className="vacation-badge">канікули</strong>}</p><button type="button" aria-label="Наступний тиждень" disabled={weekIndex === WEEK_STARTS.length - 1} onClick={() => setWeekIndex((index) => index + 1)}><ChevronRight size={18} /></button></div><div className="week-legend"><span><i className="legend-swatch numerator-swatch" /> чисельник</span><span><i className="legend-swatch denominator-swatch" /> знаменник</span></div><button type="button" onClick={() => { setStatus(''); setCalendarOpen(true) }}><CalendarPlus size={18} /> Додати в Google Calendar</button></div></div>
         <div className="schedule-wrap"><div className="schedule-grid">
           <div className="corner">Урок</div><div className="corner time-heading">Час</div>{DAYS.map((day) => <div className="day-heading" key={day.key}><span>{day.label}</span><small>{dayDateLabel(dayDate(weekStart, day.key))}</small></div>)}
           {Array.from({ length: 8 }, (_, index) => index + 1).flatMap((number) => [
