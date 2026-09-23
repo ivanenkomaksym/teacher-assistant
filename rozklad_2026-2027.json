@@ -186,7 +186,7 @@
           "classes": "7-В",
           "subject": "Іст",
           "group": null,
-          "room": null,
+          "room": "404",
           "raw": "7-В, Іст"
         },
         {
@@ -226,7 +226,7 @@
           "classes": "9-В",
           "subject": "Іст",
           "group": null,
-          "room": null,
+          "room": "404",
           "raw": "9-В, Іст"
         },
         {
@@ -306,7 +306,7 @@
           "classes": "7-А",
           "subject": "Іст",
           "group": null,
-          "room": null,
+          "room": "404",
           "raw": "7-А, Іст"
         },
         {
@@ -346,7 +346,7 @@
           "classes": "7-Б",
           "subject": "ГрОс",
           "group": null,
-          "room": null,
+          "room": "404",
           "raw": "A:7-Б, ГрОс"
         },
         {
@@ -376,7 +376,7 @@
           "classes": "7-В",
           "subject": "ГрОс",
           "group": null,
-          "room": null,
+          "room": "404",
           "raw": "B:7-В, ГрОс"
         }
       ]
@@ -516,7 +516,7 @@
           "classes": "9-Е",
           "subject": "Інф",
           "group": null,
-          "room": null,
+          "room": "315",
           "raw": "9-Е, Інф"
         },
         {
@@ -556,7 +556,7 @@
           "classes": "8-Г",
           "subject": "Інф",
           "group": null,
-          "room": null,
+          "room": "315",
           "raw": "8-Г, Інф"
         },
         {
@@ -606,7 +606,7 @@
           "classes": "8-Б",
           "subject": "Інф",
           "group": null,
-          "room": null,
+          "room": "315",
           "raw": "8-Б, Інф"
         },
         {
@@ -656,7 +656,7 @@
           "classes": "9-В",
           "subject": "Інф",
           "group": null,
-          "room": null,
+          "room": "315",
           "raw": "9-В, Інф"
         }
       ]
@@ -871,7 +871,7 @@
           "classes": "7-Ж",
           "subject": "Інф",
           "group": null,
-          "room": null,
+          "room": "314",
           "raw": "7-Ж, Інф"
         },
         {
@@ -911,7 +911,7 @@
           "classes": "7-Д",
           "subject": "Інф",
           "group": null,
-          "room": null,
+          "room": "314",
           "raw": "7-Д, Інф"
         }
       ]
@@ -1436,7 +1436,7 @@
           "classes": "11-Б",
           "subject": "Техн",
           "group": null,
-          "room": null,
+          "room": "014",
           "raw": "11-Б, Техн"
         },
         {
@@ -1456,7 +1456,7 @@
           "classes": "10-В",
           "subject": "Техн",
           "group": null,
-          "room": null,
+          "room": "014",
           "raw": "10-В, Техн"
         },
         {
@@ -1506,7 +1506,7 @@
           "classes": "7-Е,Ж",
           "subject": "Техн",
           "group": null,
-          "room": null,
+          "room": "014",
           "raw": "7-Е,Ж, Техн"
         },
         {
@@ -1556,7 +1556,7 @@
           "classes": "9-Д",
           "subject": "Техн",
           "group": null,
-          "room": null,
+          "room": "014",
           "raw": "9-Д, Техн"
         },
         {
@@ -1596,7 +1596,7 @@
           "classes": "8-Д",
           "subject": "Техн",
           "group": null,
-          "room": null,
+          "room": "014",
           "raw": "8-Д, Техн"
         }
       ]
@@ -1836,7 +1836,7 @@
           "classes": "1-А",
           "subject": "УкМПШ",
           "group": "гр1",
-          "room": null,
+          "room": "207",
           "raw": "1-А, УкМПШ, гр1"
         },
         {
@@ -1886,7 +1886,7 @@
           "classes": "1-А",
           "subject": "УкМПШ",
           "group": "гр2",
-          "room": null,
+          "room": "207",
           "raw": "1-А, УкМПШ, гр2"
         },
         {
@@ -1926,7 +1926,7 @@
           "classes": "1-А",
           "subject": "УкМПШ",
           "group": "гр2",
-          "room": null,
+          "room": "207",
           "raw": "1-А, УкМПШ, гр2"
         },
         {
@@ -1976,7 +1976,7 @@
           "classes": "1-А",
           "subject": "УкМПШ",
           "group": "гр1",
-          "room": null,
+          "room": "207",
           "raw": "1-А, УкМПШ, гр1"
         },
         {
@@ -2216,7 +2216,7 @@
           "classes": "8-А",
           "subject": "Іст",
           "group": null,
-          "room": null,
+          "room": "403",
           "raw": "8-А, Іст"
         },
         {
@@ -2266,7 +2266,7 @@
           "classes": "8-Б",
           "subject": "Іст",
           "group": null,
-          "room": null,
+          "room": "403",
           "raw": "A:8-Б, Іст"
         },
         {
@@ -2316,7 +2316,7 @@
           "classes": "6-Б",
           "subject": "ДІтаС",
           "group": null,
-          "room": null,
+          "room": "403",
           "raw": "6-Б, ДІтаС"
         }
       ]
@@ -2351,7 +2351,7 @@
           "classes": "6-А",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "212",
           "raw": "6-А, АнглМ"
         },
         {
@@ -2401,7 +2401,7 @@
           "classes": "11-А",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "212",
           "raw": "11-А, АнглМ"
         },
         {
@@ -2451,7 +2451,7 @@
           "classes": "8-А",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "212",
           "raw": "8-А, АнглМ"
         },
         {
@@ -2501,7 +2501,7 @@
           "classes": "8-Е",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "212",
           "raw": "8-Е, АнглМ"
         },
         {
@@ -2541,7 +2541,7 @@
           "classes": "10-В",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "212",
           "raw": "10-В, АнглМ"
         },
         {
@@ -2581,7 +2581,7 @@
           "classes": "8-Д",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "212",
           "raw": "8-Д, АнглМ"
         },
         {
@@ -2886,7 +2886,7 @@
           "classes": "4-Д",
           "subject": "Матем.",
           "group": null,
-          "room": null,
+          "room": "106",
           "raw": "4-Д, Матем."
         },
         {
@@ -2926,7 +2926,7 @@
           "classes": "4-Д",
           "subject": "УкМПШ",
           "group": null,
-          "room": null,
+          "room": "106",
           "raw": "4-Д, УкМПШ"
         },
         {
@@ -2976,7 +2976,7 @@
           "classes": "4-В",
           "subject": "Образ.",
           "group": null,
-          "room": null,
+          "room": "003",
           "raw": "4-В, Образ."
         },
         {
@@ -3026,7 +3026,7 @@
           "classes": "4-Д",
           "subject": "ЯДС",
           "group": null,
-          "room": null,
+          "room": "106",
           "raw": "4-Д, ЯДС"
         }
       ]
@@ -3071,7 +3071,7 @@
           "classes": "5-Б",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "412",
           "raw": "5-Б, АнглМ"
         },
         {
@@ -3121,7 +3121,7 @@
           "classes": "6-Д",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "412",
           "raw": "6-Д, АнглМ"
         },
         {
@@ -3161,7 +3161,7 @@
           "classes": "5-Г",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "412",
           "raw": "5-Г, АнглМ"
         },
         {
@@ -3241,7 +3241,7 @@
           "classes": "6-Б",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "412",
           "raw": "6-Б, АнглМ"
         },
         {
@@ -3281,7 +3281,7 @@
           "classes": "6-Г",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "412",
           "raw": "6-Г, АнглМ"
         }
       ]
@@ -3726,7 +3726,7 @@
           "classes": "2-Б",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "105",
           "raw": "2-Б, АнглМ"
         },
         {
@@ -3831,7 +3831,7 @@
           "classes": "7-Г",
           "subject": "Біо",
           "group": null,
-          "room": null,
+          "room": "205",
           "raw": "7-Г, Біо"
         },
         {
@@ -3851,7 +3851,7 @@
           "classes": "7-Д",
           "subject": "Біо",
           "group": null,
-          "room": null,
+          "room": "205",
           "raw": "7-Д, Біо"
         },
         {
@@ -3871,7 +3871,7 @@
           "classes": "7-Б",
           "subject": "Біо",
           "group": null,
-          "room": null,
+          "room": "205",
           "raw": "7-Б, Біо"
         },
         {
@@ -3891,7 +3891,7 @@
           "classes": "7-Е",
           "subject": "Біо",
           "group": null,
-          "room": null,
+          "room": "205",
           "raw": "7-Е, Біо"
         },
         {
@@ -3911,7 +3911,7 @@
           "classes": "7-В",
           "subject": "Біо",
           "group": null,
-          "room": null,
+          "room": "205",
           "raw": "7-В, Біо"
         },
         {
@@ -3931,7 +3931,7 @@
           "classes": "7-Ж",
           "subject": "Біо",
           "group": null,
-          "room": null,
+          "room": "205",
           "raw": "7-Ж, Біо"
         },
         {
@@ -3951,7 +3951,7 @@
           "classes": "7-А",
           "subject": "Біо",
           "group": null,
-          "room": null,
+          "room": "205",
           "raw": "7-А, Біо"
         }
       ]
@@ -4006,7 +4006,7 @@
           "classes": "3-А",
           "subject": "Матем.",
           "group": null,
-          "room": null,
+          "room": "214",
           "raw": "3-А, Матем."
         },
         {
@@ -4026,7 +4026,7 @@
           "classes": "3-А",
           "subject": "УкМПШ",
           "group": "гр2",
-          "room": null,
+          "room": "214",
           "raw": "3-А, УкМПШ, гр2"
         },
         {
@@ -4076,7 +4076,7 @@
           "classes": "3-А",
           "subject": "УкМПШ",
           "group": "гр1",
-          "room": null,
+          "room": "214",
           "raw": "3-А, УкМПШ, гр1"
         },
         {
@@ -4126,7 +4126,7 @@
           "classes": "3-А",
           "subject": "ЯДС",
           "group": null,
-          "room": null,
+          "room": "214",
           "raw": "3-А, ЯДС"
         },
         {
@@ -4251,7 +4251,7 @@
           "classes": "4-А",
           "subject": "АнглМ",
           "group": "гр2",
-          "room": null,
+          "room": "015",
           "raw": "4-А, АнглМ, гр2"
         },
         {
@@ -4301,7 +4301,7 @@
           "classes": "5-Г",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "015",
           "raw": "5-Г, АнглМ"
         },
         {
@@ -4351,7 +4351,7 @@
           "classes": "4-Б",
           "subject": "АнглМ",
           "group": "гр2",
-          "room": null,
+          "room": "015",
           "raw": "4-Б, АнглМ, гр2"
         },
         {
@@ -4401,7 +4401,7 @@
           "classes": "5-А",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "015",
           "raw": "5-А, АнглМ"
         },
         {
@@ -4441,7 +4441,7 @@
           "classes": "5-В",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "015",
           "raw": "5-В, АнглМ"
         }
       ]
@@ -4611,7 +4611,7 @@
           "classes": "2-А",
           "subject": "Матем.",
           "group": null,
-          "room": null,
+          "room": "209",
           "raw": "2-А, Матем."
         },
         {
@@ -4641,7 +4641,7 @@
           "classes": "2-А",
           "subject": "УкМПШ",
           "group": "гр1",
-          "room": null,
+          "room": "209",
           "raw": "2-А, УкМПШ, гр1"
         },
         {
@@ -4681,7 +4681,7 @@
           "classes": "2-А",
           "subject": "УкМПШ",
           "group": "гр1",
-          "room": null,
+          "room": "209",
           "raw": "2-А, УкМПШ, гр1"
         },
         {
@@ -4751,7 +4751,7 @@
           "classes": "2-А",
           "subject": "ЯДС",
           "group": null,
-          "room": null,
+          "room": "209",
           "raw": "2-А, ЯДС"
         }
       ]
@@ -4806,7 +4806,7 @@
           "classes": "2-Б",
           "subject": "Матем.",
           "group": null,
-          "room": null,
+          "room": "105",
           "raw": "2-Б, Матем."
         },
         {
@@ -4826,7 +4826,7 @@
           "classes": "2-Б",
           "subject": "УкМПШ",
           "group": null,
-          "room": null,
+          "room": "105",
           "raw": "2-Б, УкМПШ"
         },
         {
@@ -4886,7 +4886,7 @@
           "classes": "2-Б",
           "subject": "ЯДС",
           "group": null,
-          "room": null,
+          "room": "105",
           "raw": "2-Б, ЯДС"
         },
         {
@@ -4936,7 +4936,7 @@
           "classes": "2-Б",
           "subject": "Образ.",
           "group": null,
-          "room": null,
+          "room": "105",
           "raw": "2-Б, Образ."
         }
       ]
@@ -5166,7 +5166,7 @@
           "classes": "10-В",
           "subject": "Хім",
           "group": null,
-          "room": null,
+          "room": "202",
           "raw": "10-В, Хім"
         },
         {
@@ -5196,7 +5196,7 @@
           "classes": "8-В",
           "subject": "Хім",
           "group": null,
-          "room": null,
+          "room": "202",
           "raw": "8-В, Хім"
         },
         {
@@ -5226,7 +5226,7 @@
           "classes": "11-Б",
           "subject": "Хім",
           "group": null,
-          "room": null,
+          "room": "202",
           "raw": "11-Б, Хім"
         },
         {
@@ -5256,7 +5256,7 @@
           "classes": "8-Д",
           "subject": "Хім",
           "group": null,
-          "room": null,
+          "room": "202",
           "raw": "8-Д, Хім"
         },
         {
@@ -5326,7 +5326,7 @@
           "classes": "10-Б",
           "subject": "Хім",
           "group": null,
-          "room": null,
+          "room": "202",
           "raw": "A:10-Б, Хім"
         },
         {
@@ -5336,7 +5336,7 @@
           "classes": "10-А",
           "subject": "Хім",
           "group": null,
-          "room": null,
+          "room": "202",
           "raw": "B:10-А, Хім"
         },
         {
@@ -5401,7 +5401,7 @@
           "classes": "3-Б",
           "subject": "Матем.",
           "group": null,
-          "room": null,
+          "room": "002",
           "raw": "3-Б, Матем."
         },
         {
@@ -5441,7 +5441,7 @@
           "classes": "3-Б",
           "subject": "ЯДС",
           "group": null,
-          "room": null,
+          "room": "002",
           "raw": "3-Б, ЯДС"
         },
         {
@@ -5511,7 +5511,7 @@
           "classes": "3-Б",
           "subject": "УкМПШ",
           "group": "гр2",
-          "room": null,
+          "room": "002",
           "raw": "3-Б, УкМПШ, гр2"
         },
         {
@@ -5551,7 +5551,7 @@
           "classes": "3-Б",
           "subject": "УкМПШ",
           "group": "гр1",
-          "room": null,
+          "room": "002",
           "raw": "3-Б, УкМПШ, гр1"
         },
         {
@@ -5616,7 +5616,7 @@
           "classes": "9-А",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "213",
           "raw": "9-А, АнглМ"
         },
         {
@@ -5666,7 +5666,7 @@
           "classes": "3-Д",
           "subject": "АнглМ",
           "group": "гр2",
-          "room": null,
+          "room": "213",
           "raw": "3-Д, АнглМ, гр2"
         },
         {
@@ -5746,7 +5746,7 @@
           "classes": "8-Б",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "213",
           "raw": "8-Б, АнглМ"
         },
         {
@@ -5796,7 +5796,7 @@
           "classes": "3-Е",
           "subject": "АнглМ",
           "group": "гр2",
-          "room": null,
+          "room": "213",
           "raw": "3-Е, АнглМ, гр2"
         },
         {
@@ -5846,7 +5846,7 @@
           "classes": "8-В",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "213",
           "raw": "8-В, АнглМ"
         }
       ]
@@ -6486,7 +6486,7 @@
           "classes": "8-Д",
           "subject": "Інф",
           "group": null,
-          "room": null,
+          "room": "313",
           "raw": "8-Д, Інф"
         },
         {
@@ -6536,7 +6536,7 @@
           "classes": "9-Е",
           "subject": "Інф",
           "group": null,
-          "room": null,
+          "room": "313",
           "raw": "9-Е, Інф"
         },
         {
@@ -6576,7 +6576,7 @@
           "classes": "11-А",
           "subject": "Інф",
           "group": null,
-          "room": null,
+          "room": "313",
           "raw": "11-А, Інф"
         },
         {
@@ -6626,7 +6626,7 @@
           "classes": "8-Б",
           "subject": "Інф",
           "group": null,
-          "room": null,
+          "room": "313",
           "raw": "8-Б, Інф"
         },
         {
@@ -6676,7 +6676,7 @@
           "classes": "9-В",
           "subject": "Інф",
           "group": null,
-          "room": null,
+          "room": "313",
           "raw": "9-В, Інф"
         }
       ]
@@ -6801,7 +6801,7 @@
           "classes": "1-Д",
           "subject": "УкМПШ",
           "group": "гр1",
-          "room": null,
+          "room": "010",
           "raw": "1-Д, УкМПШ, гр1"
         },
         {
@@ -6831,7 +6831,7 @@
           "classes": "1-Д",
           "subject": "Матем.",
           "group": null,
-          "room": null,
+          "room": "010",
           "raw": "1-Д, Матем."
         },
         {
@@ -6906,7 +6906,7 @@
           "classes": "9-Б",
           "subject": "Хім",
           "group": null,
-          "room": null,
+          "room": "202",
           "raw": "9-Б, Хім"
         },
         {
@@ -7336,7 +7336,7 @@
           "classes": "5-Б",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "101",
           "raw": "5-Б, АнглМ"
         },
         {
@@ -7376,7 +7376,7 @@
           "classes": "3-В",
           "subject": "АнглМ",
           "group": "гр2",
-          "room": null,
+          "room": "101",
           "raw": "3-В, АнглМ, гр2"
         },
         {
@@ -7456,7 +7456,7 @@
           "classes": "8-Е",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "101",
           "raw": "8-Е, АнглМ"
         },
         {
@@ -7506,7 +7506,7 @@
           "classes": "5-А",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "101",
           "raw": "5-А, АнглМ"
         },
         {
@@ -7546,7 +7546,7 @@
           "classes": "5-В",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "101",
           "raw": "5-В, АнглМ"
         },
         {
@@ -7586,7 +7586,7 @@
           "classes": "8-Г",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "101",
           "raw": "8-Г, АнглМ"
         }
       ]
@@ -7641,7 +7641,7 @@
           "classes": "10-А",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "408",
           "raw": "10-А, АнглМ"
         },
         {
@@ -7946,7 +7946,7 @@
           "classes": "5-А",
           "subject": "УкрМ",
           "group": null,
-          "room": null,
+          "room": "413",
           "raw": "5-А, УкрМ"
         },
         {
@@ -7986,7 +7986,7 @@
           "classes": "5-А",
           "subject": "Літер",
           "group": null,
-          "room": null,
+          "room": "413",
           "raw": "5-А, Літер"
         },
         {
@@ -8026,7 +8026,7 @@
           "classes": "5-Б",
           "subject": "УкрМ",
           "group": null,
-          "room": null,
+          "room": "413",
           "raw": "5-Б, УкрМ"
         },
         {
@@ -8141,7 +8141,7 @@
           "classes": "4-Б",
           "subject": "УкМПШ",
           "group": "гр2",
-          "room": null,
+          "room": "201",
           "raw": "4-Б, УкМПШ, гр2"
         },
         {
@@ -8191,7 +8191,7 @@
           "classes": "4-Б",
           "subject": "УкМПШ",
           "group": "гр1",
-          "room": null,
+          "room": "201",
           "raw": "4-Б, УкМПШ, гр1"
         },
         {
@@ -8211,7 +8211,7 @@
           "classes": "4-Б",
           "subject": "Матем.",
           "group": null,
-          "room": null,
+          "room": "201",
           "raw": "4-Б, Матем."
         },
         {
@@ -8251,7 +8251,7 @@
           "classes": "4-Б",
           "subject": "УкМПШ",
           "group": "гр1",
-          "room": null,
+          "room": "201",
           "raw": "4-Б, УкМПШ, гр1"
         },
         {
@@ -8291,7 +8291,7 @@
           "classes": "4-Б",
           "subject": "УкМПШ",
           "group": "гр2",
-          "room": null,
+          "room": "201",
           "raw": "4-Б, УкМПШ, гр2"
         },
         {
@@ -8326,7 +8326,7 @@
           "classes": "8-Б",
           "subject": "Гео",
           "group": null,
-          "room": null,
+          "room": "401",
           "raw": "8-Б, Гео"
         },
         {
@@ -8356,7 +8356,7 @@
           "classes": "8-Е",
           "subject": "Гео",
           "group": null,
-          "room": null,
+          "room": "401",
           "raw": "8-Е, Гео"
         },
         {
@@ -8376,7 +8376,7 @@
           "classes": "8-Г",
           "subject": "Гео",
           "group": null,
-          "room": null,
+          "room": "401",
           "raw": "8-Г, Гео"
         },
         {
@@ -8396,7 +8396,7 @@
           "classes": "8-В",
           "subject": "Гео",
           "group": null,
-          "room": null,
+          "room": "401",
           "raw": "8-В, Гео"
         },
         {
@@ -8426,7 +8426,7 @@
           "classes": "7-Б",
           "subject": "ЗБД",
           "group": null,
-          "room": null,
+          "room": "401",
           "raw": "7-Б, ЗБД"
         },
         {
@@ -8466,7 +8466,7 @@
           "classes": "8-А",
           "subject": "Гео",
           "group": null,
-          "room": null,
+          "room": "401",
           "raw": "8-А, Гео"
         },
         {
@@ -8521,7 +8521,7 @@
           "classes": "9-В",
           "subject": "УкрМ",
           "group": null,
-          "room": null,
+          "room": "303",
           "raw": "9-В, УкрМ"
         },
         {
@@ -8601,7 +8601,7 @@
           "classes": "9-Б",
           "subject": "УкрМ",
           "group": null,
-          "room": null,
+          "room": "303",
           "raw": "9-Б, УкрМ"
         },
         {
@@ -8681,7 +8681,7 @@
           "classes": "8-В",
           "subject": "УкрМ",
           "group": null,
-          "room": null,
+          "room": "303",
           "raw": "8-В, УкрМ"
         },
         {
@@ -8721,7 +8721,7 @@
           "classes": "7-В",
           "subject": "УкрЛ",
           "group": null,
-          "room": null,
+          "room": "303",
           "raw": "7-В, УкрЛ"
         },
         {
@@ -8796,7 +8796,7 @@
           "classes": "1-Б",
           "subject": "УкМПШ",
           "group": "гр2",
-          "room": null,
+          "room": "211",
           "raw": "1-Б, УкМПШ, гр2"
         },
         {
@@ -8846,7 +8846,7 @@
           "classes": "1-Б",
           "subject": "УкМПШ",
           "group": "гр1",
-          "room": null,
+          "room": "211",
           "raw": "1-Б, УкМПШ, гр1"
         },
         {
@@ -8896,7 +8896,7 @@
           "classes": "1-Б",
           "subject": "УкМПШ",
           "group": "гр2",
-          "room": null,
+          "room": "211",
           "raw": "1-Б, УкМПШ, гр2"
         },
         {
@@ -8926,7 +8926,7 @@
           "classes": "1-Б",
           "subject": "УкМПШ",
           "group": "гр1",
-          "room": null,
+          "room": "211",
           "raw": "1-Б, УкМПШ, гр1"
         },
         {
@@ -9011,7 +9011,7 @@
           "classes": "7-А",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "407",
           "raw": "7-А, АнглМ"
         },
         {
@@ -9061,7 +9061,7 @@
           "classes": "7-В",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "407",
           "raw": "7-В, АнглМ"
         },
         {
@@ -9151,7 +9151,7 @@
           "classes": "9-Д",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "407",
           "raw": "9-Д, АнглМ"
         },
         {
@@ -9191,7 +9191,7 @@
           "classes": "9-Д",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "407",
           "raw": "9-Д, АнглМ"
         },
         {
@@ -9231,7 +9231,7 @@
           "classes": "9-Е",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "407",
           "raw": "9-Е, АнглМ"
         },
         {
@@ -9336,7 +9336,7 @@
           "classes": "4-Д",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "106",
           "raw": "4-Д, АнглМ"
         },
         {
@@ -9511,7 +9511,7 @@
           "classes": "9-Д",
           "subject": "ІК \"М\"",
           "group": null,
-          "room": null,
+          "room": "307",
           "raw": "9-Д, ІК \"М\""
         },
         {
@@ -9561,7 +9561,7 @@
           "classes": "8-А",
           "subject": "ІК \"М\"",
           "group": null,
-          "room": null,
+          "room": "307",
           "raw": "8-А, ІК \"М\""
         },
         {
@@ -9601,7 +9601,7 @@
           "classes": "8-Б",
           "subject": "ІК \"М\"",
           "group": null,
-          "room": null,
+          "room": "307",
           "raw": "8-Б, ІК \"М\""
         },
         {
@@ -9651,7 +9651,7 @@
           "classes": "10-А",
           "subject": "Мат",
           "group": null,
-          "room": null,
+          "room": "307",
           "raw": "10-А, Мат"
         },
         {
@@ -9711,7 +9711,7 @@
           "classes": "10-В",
           "subject": "Мат",
           "group": null,
-          "room": null,
+          "room": "307",
           "raw": "10-В, Мат"
         }
       ]
@@ -9726,7 +9726,7 @@
           "classes": "7-Г",
           "subject": "Інф",
           "group": null,
-          "room": null,
+          "room": "314",
           "raw": "7-Г, Інф"
         },
         {
@@ -9806,7 +9806,7 @@
           "classes": "11-А",
           "subject": "Інф",
           "group": null,
-          "room": null,
+          "room": "314",
           "raw": "11-А, Інф"
         },
         {
@@ -10661,7 +10661,7 @@
           "classes": "2-В",
           "subject": "Матем.",
           "group": null,
-          "room": null,
+          "room": "107",
           "raw": "2-В, Матем."
         },
         {
@@ -10701,7 +10701,7 @@
           "classes": "2-В",
           "subject": "УкМПШ",
           "group": null,
-          "room": null,
+          "room": "107",
           "raw": "2-В, УкМПШ"
         },
         {
@@ -10761,7 +10761,7 @@
           "classes": "2-В",
           "subject": "ЯДС",
           "group": null,
-          "room": null,
+          "room": "107",
           "raw": "2-В, ЯДС"
         },
         {
@@ -10801,7 +10801,7 @@
           "classes": "2-В",
           "subject": "Образ.",
           "group": null,
-          "room": null,
+          "room": "107",
           "raw": "2-В, Образ."
         }
       ]
@@ -10951,7 +10951,7 @@
           "classes": "10-В",
           "subject": "Фізика",
           "group": null,
-          "room": null,
+          "room": "302",
           "raw": "10-В, Фізика"
         },
         {
@@ -10971,7 +10971,7 @@
           "classes": "7-Г",
           "subject": "Фізика",
           "group": null,
-          "room": null,
+          "room": "302",
           "raw": "7-Г, Фізика"
         },
         {
@@ -11021,7 +11021,7 @@
           "classes": "7-Е",
           "subject": "Фізика",
           "group": null,
-          "room": null,
+          "room": "302",
           "raw": "7-Е, Фізика"
         },
         {
@@ -11041,7 +11041,7 @@
           "classes": "7-Б",
           "subject": "Фізика",
           "group": null,
-          "room": null,
+          "room": "302",
           "raw": "7-Б, Фізика"
         },
         {
@@ -11321,7 +11321,7 @@
           "classes": "4-В",
           "subject": "УкМПШ",
           "group": "гр2",
-          "room": null,
+          "room": "003",
           "raw": "4-В, УкМПШ, гр2"
         },
         {
@@ -11371,7 +11371,7 @@
           "classes": "4-В",
           "subject": "УкМПШ",
           "group": "гр1",
-          "room": null,
+          "room": "003",
           "raw": "4-В, УкМПШ, гр1"
         },
         {
@@ -11421,7 +11421,7 @@
           "classes": "4-В",
           "subject": "Матем.",
           "group": null,
-          "room": null,
+          "room": "003",
           "raw": "4-В, Матем."
         },
         {
@@ -11471,7 +11471,7 @@
           "classes": "4-В",
           "subject": "ЯДС",
           "group": null,
-          "room": null,
+          "room": "003",
           "raw": "4-В, ЯДС"
         },
         {
@@ -11811,7 +11811,7 @@
           "classes": "6-Б",
           "subject": "Мат",
           "group": null,
-          "room": null,
+          "room": "309",
           "raw": "6-Б, Мат"
         },
         {
@@ -11861,7 +11861,7 @@
           "classes": "9-Б",
           "subject": "ІК \"М\"",
           "group": null,
-          "room": null,
+          "room": "309",
           "raw": "9-Б, ІК \"М\""
         },
         {
@@ -11911,7 +11911,7 @@
           "classes": "11-А",
           "subject": "Алг",
           "group": null,
-          "room": null,
+          "room": "309",
           "raw": "11-А, Алг"
         },
         {
@@ -11981,7 +11981,7 @@
           "classes": "11-Б",
           "subject": "Алг",
           "group": null,
-          "room": null,
+          "room": "309",
           "raw": "11-Б, Алг"
         },
         {
@@ -11991,7 +11991,7 @@
           "classes": "11-Б",
           "subject": "Алг",
           "group": null,
-          "room": null,
+          "room": "309",
           "raw": "11-Б, Алг"
         }
       ]
@@ -12036,7 +12036,7 @@
           "classes": "7-Ж",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "206",
           "raw": "7-Ж, АнглМ"
         },
         {
@@ -12086,7 +12086,7 @@
           "classes": "6-В",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "206",
           "raw": "6-В, АнглМ"
         },
         {
@@ -12136,7 +12136,7 @@
           "classes": "8-А",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "206",
           "raw": "8-А, АнглМ"
         },
         {
@@ -12256,7 +12256,7 @@
           "classes": "8-Д",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "206",
           "raw": "8-Д, АнглМ"
         },
         {
@@ -12296,7 +12296,7 @@
           "classes": "8-Г",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "206",
           "raw": "8-Г, АнглМ"
         }
       ]
@@ -12351,7 +12351,7 @@
           "classes": "1-В",
           "subject": "УкМПШ",
           "group": "гр1",
-          "room": null,
+          "room": "104",
           "raw": "1-В, УкМПШ, гр1"
         },
         {
@@ -12391,7 +12391,7 @@
           "classes": "1-В",
           "subject": "УкМПШ",
           "group": "гр2",
-          "room": null,
+          "room": "104",
           "raw": "1-В, УкМПШ, гр2"
         },
         {
@@ -12441,7 +12441,7 @@
           "classes": "1-В",
           "subject": "УкМПШ",
           "group": "гр2",
-          "room": null,
+          "room": "104",
           "raw": "1-В, УкМПШ, гр2"
         },
         {
@@ -12481,7 +12481,7 @@
           "classes": "1-В",
           "subject": "УкМПШ",
           "group": "гр1",
-          "room": null,
+          "room": "104",
           "raw": "1-В, УкМПШ, гр1"
         },
         {
@@ -12511,7 +12511,7 @@
           "classes": "1-В",
           "subject": "ЯДС",
           "group": null,
-          "room": null,
+          "room": "104",
           "raw": "1-В, ЯДС"
         }
       ]
@@ -12546,7 +12546,7 @@
           "classes": "4-Г",
           "subject": "АнглМ",
           "group": "гр1",
-          "room": null,
+          "room": "011",
           "raw": "4-Г, АнглМ, гр1"
         },
         {
@@ -12596,7 +12596,7 @@
           "classes": "4-Д",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "011",
           "raw": "4-Д, АнглМ"
         },
         {
@@ -12636,7 +12636,7 @@
           "classes": "10-Б",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "011",
           "raw": "10-Б, АнглМ"
         },
         {
@@ -12686,7 +12686,7 @@
           "classes": "7-Г",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "011",
           "raw": "7-Г, АнглМ"
         },
         {
@@ -12726,7 +12726,7 @@
           "classes": "4-А",
           "subject": "АнглМ",
           "group": "гр1",
-          "room": null,
+          "room": "011",
           "raw": "4-А, АнглМ, гр1"
         },
         {
@@ -12776,7 +12776,7 @@
           "classes": "7-Е",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "011",
           "raw": "7-Е, АнглМ"
         },
         {
@@ -12956,7 +12956,7 @@
           "classes": "3-В",
           "subject": "Матем.",
           "group": null,
-          "room": null,
+          "room": "001",
           "raw": "3-В, Матем."
         },
         {
@@ -13006,7 +13006,7 @@
           "classes": "3-В",
           "subject": "УкМПШ",
           "group": "гр1",
-          "room": null,
+          "room": "001",
           "raw": "3-В, УкМПШ, гр1"
         },
         {
@@ -13036,7 +13036,7 @@
           "classes": "3-В",
           "subject": "УкМПШ",
           "group": "гр2",
-          "room": null,
+          "room": "001",
           "raw": "3-В, УкМПШ, гр2"
         },
         {
@@ -13076,7 +13076,7 @@
           "classes": "3-В",
           "subject": "ЯДС",
           "group": null,
-          "room": null,
+          "room": "001",
           "raw": "3-В, ЯДС"
         },
         {
@@ -13151,7 +13151,7 @@
           "classes": "7-Е",
           "subject": "ІК \"М\"",
           "group": null,
-          "room": null,
+          "room": "308",
           "raw": "7-Е, ІК \"М\""
         },
         {
@@ -13191,7 +13191,7 @@
           "classes": "7-Ж",
           "subject": "ІК \"М\"",
           "group": null,
-          "room": null,
+          "room": "308",
           "raw": "7-Ж, ІК \"М\""
         },
         {
@@ -13241,7 +13241,7 @@
           "classes": "8-Д",
           "subject": "ІК \"М\"",
           "group": null,
-          "room": null,
+          "room": "308",
           "raw": "8-Д, ІК \"М\""
         },
         {
@@ -13311,7 +13311,7 @@
           "classes": "7-Г",
           "subject": "ІК \"М\"",
           "group": null,
-          "room": null,
+          "room": "308",
           "raw": "7-Г, ІК \"М\""
         },
         {
@@ -13366,7 +13366,7 @@
           "classes": "9-Г",
           "subject": "ЗБД",
           "group": null,
-          "room": null,
+          "room": "410",
           "raw": "9-Г, ЗБД"
         },
         {
@@ -13386,7 +13386,7 @@
           "classes": "9-Д",
           "subject": "ЗБД",
           "group": null,
-          "room": null,
+          "room": "410",
           "raw": "9-Д, ЗБД"
         },
         {
@@ -13436,7 +13436,7 @@
           "classes": "7-В",
           "subject": "ЗБД",
           "group": null,
-          "room": null,
+          "room": "410",
           "raw": "7-В, ЗБД"
         },
         {
@@ -13526,7 +13526,7 @@
           "classes": "6-В",
           "subject": "ЗБД",
           "group": null,
-          "room": null,
+          "room": "410",
           "raw": "6-В, ЗБД"
         },
         {
@@ -13576,7 +13576,7 @@
           "classes": "6-Г",
           "subject": "ЗБД",
           "group": null,
-          "room": null,
+          "room": "410",
           "raw": "6-Г, ЗБД"
         },
         {
@@ -13681,7 +13681,7 @@
           "classes": "6-Б",
           "subject": "УкрМ",
           "group": null,
-          "room": null,
+          "room": "312",
           "raw": "6-Б, УкрМ"
         },
         {
@@ -13731,7 +13731,7 @@
           "classes": "7-Д",
           "subject": "УкрМ",
           "group": null,
-          "room": null,
+          "room": "312",
           "raw": "7-Д, УкрМ"
         },
         {
@@ -13771,7 +13771,7 @@
           "classes": "6-А",
           "subject": "Літер",
           "group": null,
-          "room": null,
+          "room": "312",
           "raw": "6-А, Літер"
         },
         {
@@ -13801,7 +13801,7 @@
           "classes": "6-Б",
           "subject": "Літер",
           "group": null,
-          "room": null,
+          "room": "312",
           "raw": "6-Б, Літер"
         },
         {
@@ -13811,7 +13811,7 @@
           "classes": "6-Д",
           "subject": "Літер",
           "group": null,
-          "room": null,
+          "room": "312",
           "raw": "6-Д, Літер"
         }
       ]
@@ -13856,7 +13856,7 @@
           "classes": "9-А",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "016",
           "raw": "9-А, АнглМ"
         },
         {
@@ -13906,7 +13906,7 @@
           "classes": "3-А",
           "subject": "АнглМ",
           "group": "гр1",
-          "room": null,
+          "room": "016",
           "raw": "3-А, АнглМ, гр1"
         },
         {
@@ -13946,7 +13946,7 @@
           "classes": "3-В",
           "subject": "АнглМ",
           "group": "гр1",
-          "room": null,
+          "room": "016",
           "raw": "3-В, АнглМ, гр1"
         },
         {
@@ -13996,7 +13996,7 @@
           "classes": "3-Б",
           "subject": "АнглМ",
           "group": "гр1",
-          "room": null,
+          "room": "016",
           "raw": "3-Б, АнглМ, гр1"
         },
         {
@@ -14046,7 +14046,7 @@
           "classes": "9-Г",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "016",
           "raw": "9-Г, АнглМ"
         },
         {
@@ -14086,7 +14086,7 @@
           "classes": "9-В",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "016",
           "raw": "9-В, АнглМ"
         }
       ]
@@ -14331,7 +14331,7 @@
           "classes": "4-Г",
           "subject": "УкМПШ",
           "group": "гр2",
-          "room": null,
+          "room": "004",
           "raw": "4-Г, УкМПШ, гр2"
         },
         {
@@ -14361,7 +14361,7 @@
           "classes": "4-Г",
           "subject": "УкМПШ",
           "group": "гр1",
-          "room": null,
+          "room": "004",
           "raw": "4-Г, УкМПШ, гр1"
         },
         {
@@ -14411,7 +14411,7 @@
           "classes": "4-Г",
           "subject": "УкМПШ",
           "group": "гр2",
-          "room": null,
+          "room": "004",
           "raw": "4-Г, УкМПШ, гр2"
         },
         {
@@ -14441,7 +14441,7 @@
           "classes": "4-Г",
           "subject": "УкМПШ",
           "group": "гр1",
-          "room": null,
+          "room": "004",
           "raw": "4-Г, УкМПШ, гр1"
         },
         {
@@ -14481,7 +14481,7 @@
           "classes": "4-Г",
           "subject": "Матем.",
           "group": null,
-          "room": null,
+          "room": "004",
           "raw": "4-Г, Матем."
         },
         {
@@ -14731,7 +14731,7 @@
           "classes": "7-Д",
           "subject": "Обр",
           "group": null,
-          "room": null,
+          "room": "012",
           "raw": "7-Д, Обр"
         },
         {
@@ -14781,7 +14781,7 @@
           "classes": "5-А",
           "subject": "Обр",
           "group": null,
-          "room": null,
+          "room": "012",
           "raw": "5-А, Обр"
         },
         {
@@ -14811,7 +14811,7 @@
           "classes": "7-Ж",
           "subject": "Обр",
           "group": null,
-          "room": null,
+          "room": "012",
           "raw": "7-Ж, Обр"
         },
         {
@@ -14851,7 +14851,7 @@
           "classes": "5-В",
           "subject": "Обр",
           "group": null,
-          "room": null,
+          "room": "012",
           "raw": "5-В, Обр"
         },
         {
@@ -14891,7 +14891,7 @@
           "classes": "7-Б",
           "subject": "Обр",
           "group": null,
-          "room": null,
+          "room": "012",
           "raw": "7-Б, Обр"
         },
         {
@@ -14931,7 +14931,7 @@
           "classes": "9-А",
           "subject": "Мист",
           "group": null,
-          "room": null,
+          "room": "012",
           "raw": "9-А, Мист"
         }
       ]
@@ -14976,7 +14976,7 @@
           "classes": "3-Г",
           "subject": "Матем.",
           "group": null,
-          "room": null,
+          "room": "007",
           "raw": "3-Г, Матем."
         },
         {
@@ -15016,7 +15016,7 @@
           "classes": "3-Г",
           "subject": "УкМПШ",
           "group": "гр2",
-          "room": null,
+          "room": "007",
           "raw": "3-Г, УкМПШ, гр2"
         },
         {
@@ -15066,7 +15066,7 @@
           "classes": "3-Г",
           "subject": "УкМПШ",
           "group": "гр1",
-          "room": null,
+          "room": "007",
           "raw": "3-Г, УкМПШ, гр1"
         },
         {
@@ -15136,7 +15136,7 @@
           "classes": "3-Г",
           "subject": "ЯДС",
           "group": null,
-          "room": null,
+          "room": "007",
           "raw": "3-Г, ЯДС"
         },
         {
@@ -15386,7 +15386,7 @@
           "classes": "8-Д",
           "subject": "Мист",
           "group": null,
-          "room": null,
+          "room": "103",
           "raw": "8-Д, Мист"
         },
         {
@@ -15446,7 +15446,7 @@
           "classes": "2-В",
           "subject": "Муз",
           "group": null,
-          "room": null,
+          "room": "103",
           "raw": "2-В, Муз"
         },
         {
@@ -15476,7 +15476,7 @@
           "classes": "2-Д",
           "subject": "Муз",
           "group": null,
-          "room": null,
+          "room": "103",
           "raw": "2-Д, Муз"
         },
         {
@@ -15556,7 +15556,7 @@
           "classes": "5-Б",
           "subject": "Муз",
           "group": null,
-          "room": null,
+          "room": "103",
           "raw": "5-Б, Муз"
         },
         {
@@ -15631,7 +15631,7 @@
           "classes": "10-Б",
           "subject": "УкрМ",
           "group": null,
-          "room": null,
+          "room": "310",
           "raw": "10-Б, УкрМ"
         },
         {
@@ -15681,7 +15681,7 @@
           "classes": "7-Е",
           "subject": "УкрЛ",
           "group": null,
-          "room": null,
+          "room": "310",
           "raw": "7-Е, УкрЛ"
         },
         {
@@ -15731,7 +15731,7 @@
           "classes": "9-Б",
           "subject": "УкрМ",
           "group": null,
-          "room": null,
+          "room": "310",
           "raw": "9-Б, УкрМ"
         },
         {
@@ -15761,7 +15761,7 @@
           "classes": "9-Б",
           "subject": "УкрЛ",
           "group": null,
-          "room": null,
+          "room": "310",
           "raw": "9-Б, УкрЛ"
         },
         {
@@ -16146,7 +16146,7 @@
           "classes": "10-Б",
           "subject": "Іст",
           "group": null,
-          "room": null,
+          "room": "404",
           "raw": "10-Б, Іст"
         },
         {
@@ -16241,7 +16241,7 @@
           "classes": "8-Г",
           "subject": "ІК \"М\"",
           "group": null,
-          "room": null,
+          "room": "414",
           "raw": "8-Г, ІК \"М\""
         },
         {
@@ -16291,7 +16291,7 @@
           "classes": "6-Е",
           "subject": "Мат",
           "group": null,
-          "room": null,
+          "room": "414",
           "raw": "6-Е, Мат"
         },
         {
@@ -16331,7 +16331,7 @@
           "classes": "8-Е",
           "subject": "ІК \"М\"",
           "group": null,
-          "room": null,
+          "room": "414",
           "raw": "8-Е, ІК \"М\""
         },
         {
@@ -16371,7 +16371,7 @@
           "classes": "6-А",
           "subject": "Мат",
           "group": null,
-          "room": null,
+          "room": "414",
           "raw": "6-А, Мат"
         },
         {
@@ -16911,7 +16911,7 @@
           "classes": "3-Д",
           "subject": "Матем.",
           "group": null,
-          "room": null,
+          "room": "008",
           "raw": "3-Д, Матем."
         },
         {
@@ -16961,7 +16961,7 @@
           "classes": "3-Д",
           "subject": "УкМПШ",
           "group": "гр1",
-          "room": null,
+          "room": "008",
           "raw": "3-Д, УкМПШ, гр1"
         },
         {
@@ -17001,7 +17001,7 @@
           "classes": "3-Д",
           "subject": "УкМПШ",
           "group": "гр2",
-          "room": null,
+          "room": "008",
           "raw": "3-Д, УкМПШ, гр2"
         },
         {
@@ -17071,7 +17071,7 @@
           "classes": "3-Д",
           "subject": "ЯДС",
           "group": null,
-          "room": null,
+          "room": "008",
           "raw": "3-Д, ЯДС"
         }
       ]
@@ -17156,7 +17156,7 @@
           "classes": "6-Д",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "109",
           "raw": "6-Д, АнглМ"
         },
         {
@@ -17196,7 +17196,7 @@
           "classes": "8-Б",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "109",
           "raw": "8-Б, АнглМ"
         },
         {
@@ -17226,7 +17226,7 @@
           "classes": "8-В",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "109",
           "raw": "8-В, АнглМ"
         }
       ]
@@ -17281,7 +17281,7 @@
           "classes": "9-В",
           "subject": "УкрМ",
           "group": null,
-          "room": null,
+          "room": "402",
           "raw": "9-В, УкрМ"
         },
         {
@@ -17321,7 +17321,7 @@
           "classes": "9-А",
           "subject": "УкрМ",
           "group": null,
-          "room": null,
+          "room": "402",
           "raw": "9-А, УкрМ"
         },
         {
@@ -17361,7 +17361,7 @@
           "classes": "9-А",
           "subject": "УкрЛ",
           "group": null,
-          "room": null,
+          "room": "402",
           "raw": "9-А, УкрЛ"
         },
         {
@@ -17411,7 +17411,7 @@
           "classes": "8-А",
           "subject": "УкрМ",
           "group": null,
-          "room": null,
+          "room": "402",
           "raw": "8-А, УкрМ"
         },
         {
@@ -17461,7 +17461,7 @@
           "classes": "9-В",
           "subject": "УкрЛ",
           "group": null,
-          "room": null,
+          "room": "402",
           "raw": "9-В, УкрЛ"
         },
         {
@@ -17536,7 +17536,7 @@
           "classes": "1-Г",
           "subject": "Матем.",
           "group": null,
-          "room": null,
+          "room": "208",
           "raw": "1-Г, Матем."
         },
         {
@@ -17576,7 +17576,7 @@
           "classes": "1-Г",
           "subject": "ЯДС",
           "group": null,
-          "room": null,
+          "room": "208",
           "raw": "1-Г, ЯДС"
         },
         {
@@ -17626,7 +17626,7 @@
           "classes": "1-Г",
           "subject": "УкМПШ",
           "group": "гр1",
-          "room": null,
+          "room": "208",
           "raw": "1-Г, УкМПШ, гр1"
         },
         {
@@ -17711,7 +17711,7 @@
           "classes": "7-В",
           "subject": "ІК \"М\"",
           "group": null,
-          "room": null,
+          "room": "301",
           "raw": "7-В, ІК \"М\""
         },
         {
@@ -17751,7 +17751,7 @@
           "classes": "8-В",
           "subject": "ІК \"М\"",
           "group": null,
-          "room": null,
+          "room": "301",
           "raw": "8-В, ІК \"М\""
         },
         {
@@ -17801,7 +17801,7 @@
           "classes": "7-Д",
           "subject": "ІК \"М\"",
           "group": null,
-          "room": null,
+          "room": "301",
           "raw": "7-Д, ІК \"М\""
         },
         {
@@ -17916,7 +17916,7 @@
           "classes": "5-Б",
           "subject": "Мат",
           "group": null,
-          "room": null,
+          "room": "305",
           "raw": "5-Б, Мат"
         },
         {
@@ -17956,7 +17956,7 @@
           "classes": "5-В",
           "subject": "Мат",
           "group": null,
-          "room": null,
+          "room": "305",
           "raw": "5-В, Мат"
         },
         {
@@ -18006,7 +18006,7 @@
           "classes": "5-А",
           "subject": "Мат",
           "group": null,
-          "room": null,
+          "room": "305",
           "raw": "5-А, Мат"
         },
         {
@@ -18026,7 +18026,7 @@
           "classes": "6-Д",
           "subject": "Мат",
           "group": null,
-          "room": null,
+          "room": "305",
           "raw": "6-Д, Мат"
         },
         {
@@ -18051,7 +18051,7 @@
           "classes": "7-Г",
           "subject": "Інф",
           "group": null,
-          "room": null,
+          "room": "415",
           "raw": "7-Г, Інф"
         },
         {
@@ -18061,7 +18061,7 @@
           "classes": "8-Д",
           "subject": "Інф",
           "group": null,
-          "room": null,
+          "room": "415",
           "raw": "8-Д, Інф"
         },
         {
@@ -18121,7 +18121,7 @@
           "classes": "8-Г",
           "subject": "Інф",
           "group": null,
-          "room": null,
+          "room": "415",
           "raw": "8-Г, Інф"
         },
         {
@@ -18171,7 +18171,7 @@
           "classes": "7-Ж",
           "subject": "Інф",
           "group": null,
-          "room": null,
+          "room": "415",
           "raw": "7-Ж, Інф"
         },
         {
@@ -18221,7 +18221,7 @@
           "classes": "7-Д",
           "subject": "Інф",
           "group": null,
-          "room": null,
+          "room": "415",
           "raw": "7-Д, Інф"
         }
       ]
@@ -18796,7 +18796,7 @@
           "classes": "6-Д",
           "subject": "Інф",
           "group": null,
-          "room": null,
+          "room": "315",
           "raw": "6-Д, Інф"
         },
         {
@@ -19026,7 +19026,7 @@
           "classes": "4-А",
           "subject": "Матем.",
           "group": null,
-          "room": null,
+          "room": "006",
           "raw": "4-А, Матем."
         },
         {
@@ -19066,7 +19066,7 @@
           "classes": "4-А",
           "subject": "УкМПШ",
           "group": "гр1",
-          "room": null,
+          "room": "006",
           "raw": "4-А, УкМПШ, гр1"
         },
         {
@@ -19106,7 +19106,7 @@
           "classes": "4-А",
           "subject": "УкМПШ",
           "group": "гр2",
-          "room": null,
+          "room": "006",
           "raw": "4-А, УкМПШ, гр2"
         },
         {
@@ -19136,7 +19136,7 @@
           "classes": "4-А",
           "subject": "УкМПШ",
           "group": "гр1",
-          "room": null,
+          "room": "006",
           "raw": "4-А, УкМПШ, гр1"
         },
         {
@@ -19176,7 +19176,7 @@
           "classes": "4-А",
           "subject": "УкМПШ",
           "group": "гр2",
-          "room": null,
+          "room": "006",
           "raw": "4-А, УкМПШ, гр2"
         },
         {
@@ -19231,7 +19231,7 @@
           "classes": "2-Г",
           "subject": "УкМПШ",
           "group": "гр2",
-          "room": null,
+          "room": "009",
           "raw": "2-Г, УкМПШ, гр2"
         },
         {
@@ -19301,7 +19301,7 @@
           "classes": "2-Г",
           "subject": "Матем.",
           "group": null,
-          "room": null,
+          "room": "009",
           "raw": "2-Г, Матем."
         },
         {
@@ -19331,7 +19331,7 @@
           "classes": "2-Г",
           "subject": "ФКПШ",
           "group": null,
-          "room": null,
+          "room": "009",
           "raw": "2-Г, ФКПШ"
         },
         {
@@ -19371,7 +19371,7 @@
           "classes": "2-Г",
           "subject": "ЯДС",
           "group": null,
-          "room": null,
+          "room": "009",
           "raw": "2-Г, ЯДС"
         }
       ]
@@ -19461,7 +19461,7 @@
           "classes": "6-В",
           "subject": "Літер",
           "group": null,
-          "room": null,
+          "room": "406",
           "raw": "6-В, Літер"
         },
         {
@@ -19501,7 +19501,7 @@
           "classes": "9-А",
           "subject": "УкрМ",
           "group": null,
-          "room": null,
+          "room": "406",
           "raw": "9-А, УкрМ"
         },
         {
@@ -19541,7 +19541,7 @@
           "classes": "9-Г",
           "subject": "УкрЛ",
           "group": null,
-          "room": null,
+          "room": "406",
           "raw": "9-Г, УкрЛ"
         },
         {
@@ -19621,7 +19621,7 @@
           "classes": "6-Е",
           "subject": "УкрМ",
           "group": null,
-          "room": null,
+          "room": "406",
           "raw": "6-Е, УкрМ"
         },
         {
@@ -19651,7 +19651,7 @@
           "classes": "6-Е",
           "subject": "Літер",
           "group": null,
-          "room": null,
+          "room": "406",
           "raw": "6-Е, Літер"
         },
         {
@@ -19821,7 +19821,7 @@
           "classes": "3-Е",
           "subject": "УкМПШ",
           "group": "гр2",
-          "room": null,
+          "room": "210",
           "raw": "3-Е, УкМПШ, гр2"
         },
         {
@@ -19871,7 +19871,7 @@
           "classes": "3-Е",
           "subject": "Матем.",
           "group": null,
-          "room": null,
+          "room": "210",
           "raw": "3-Е, Матем."
         },
         {
@@ -19931,7 +19931,7 @@
           "classes": "3-Е",
           "subject": "ЯДС",
           "group": null,
-          "room": null,
+          "room": "210",
           "raw": "3-Е, ЯДС"
         },
         {
@@ -19981,7 +19981,7 @@
           "classes": "3-Е",
           "subject": "УкМПШ",
           "group": "гр1",
-          "room": null,
+          "room": "210",
           "raw": "3-Е, УкМПШ, гр1"
         },
         {
@@ -20196,7 +20196,7 @@
           "classes": "5-А",
           "subject": "УкрМ",
           "group": null,
-          "room": null,
+          "room": "405",
           "raw": "5-А, УкрМ"
         },
         {
@@ -20246,7 +20246,7 @@
           "classes": "10-А",
           "subject": "УкрМ",
           "group": null,
-          "room": null,
+          "room": "405",
           "raw": "10-А, УкрМ"
         },
         {
@@ -20296,7 +20296,7 @@
           "classes": "10-В",
           "subject": "УкрМ",
           "group": null,
-          "room": null,
+          "room": "405",
           "raw": "10-В, УкрМ"
         },
         {
@@ -20356,7 +20356,7 @@
           "classes": "10-А",
           "subject": "УкрЛ",
           "group": null,
-          "room": null,
+          "room": "405",
           "raw": "10-А, УкрЛ"
         },
         {
@@ -20656,7 +20656,7 @@
           "classes": "11-Б",
           "subject": "Техн",
           "group": null,
-          "room": null,
+          "room": "013",
           "raw": "11-Б, Техн"
         },
         {
@@ -20686,7 +20686,7 @@
           "classes": "10-В",
           "subject": "Техн",
           "group": null,
-          "room": null,
+          "room": "013",
           "raw": "10-В, Техн"
         },
         {
@@ -20726,7 +20726,7 @@
           "classes": "7-Е,Ж",
           "subject": "Техн",
           "group": null,
-          "room": null,
+          "room": "013",
           "raw": "7-Е,Ж, Техн"
         },
         {
@@ -20776,7 +20776,7 @@
           "classes": "9-Д",
           "subject": "Техн",
           "group": null,
-          "room": null,
+          "room": "013",
           "raw": "9-Д, Техн"
         },
         {
@@ -20826,7 +20826,7 @@
           "classes": "8-Д",
           "subject": "Техн",
           "group": null,
-          "room": null,
+          "room": "013",
           "raw": "8-Д, Техн"
         }
       ]
@@ -20881,7 +20881,7 @@
           "classes": "10-Б",
           "subject": "УкрМ",
           "group": null,
-          "room": null,
+          "room": "311",
           "raw": "10-Б, УкрМ"
         },
         {
@@ -20931,7 +20931,7 @@
           "classes": "10-А",
           "subject": "УкрМ",
           "group": null,
-          "room": null,
+          "room": "311",
           "raw": "10-А, УкрМ"
         },
         {
@@ -20981,7 +20981,7 @@
           "classes": "10-В",
           "subject": "УкрМ",
           "group": null,
-          "room": null,
+          "room": "311",
           "raw": "10-В, УкрМ"
         },
         {
@@ -21021,7 +21021,7 @@
           "classes": "5-В",
           "subject": "УкрМ",
           "group": null,
-          "room": null,
+          "room": "311",
           "raw": "5-В, УкрМ"
         },
         {
@@ -21166,7 +21166,7 @@
           "classes": "9-Г",
           "subject": "ЗарЛ",
           "group": null,
-          "room": null,
+          "room": "409",
           "raw": "9-Г, ЗарЛ"
         },
         {
@@ -21206,7 +21206,7 @@
           "classes": "8-Б",
           "subject": "ЗарЛ",
           "group": null,
-          "room": null,
+          "room": "409",
           "raw": "8-Б, ЗарЛ"
         },
         {
@@ -21256,7 +21256,7 @@
           "classes": "8-А",
           "subject": "ЗарЛ",
           "group": null,
-          "room": null,
+          "room": "409",
           "raw": "8-А, ЗарЛ"
         },
         {
@@ -21286,7 +21286,7 @@
           "classes": "11-А",
           "subject": "ЗарЛ",
           "group": null,
-          "room": null,
+          "room": "409",
           "raw": "11-А, ЗарЛ"
         }
       ]
@@ -21341,7 +21341,7 @@
           "classes": "4-Е",
           "subject": "Матем.",
           "group": null,
-          "room": null,
+          "room": "102",
           "raw": "4-Е, Матем."
         },
         {
@@ -21411,7 +21411,7 @@
           "classes": "4-Е",
           "subject": "УкМПШ",
           "group": "гр1",
-          "room": null,
+          "room": "102",
           "raw": "4-Е, УкМПШ, гр1"
         },
         {
@@ -21451,7 +21451,7 @@
           "classes": "4-Е",
           "subject": "УкМПШ",
           "group": "гр2",
-          "room": null,
+          "room": "102",
           "raw": "4-Е, УкМПШ, гр2"
         },
         {
@@ -21481,7 +21481,7 @@
           "classes": "4-Е",
           "subject": "ЯДС",
           "group": null,
-          "room": null,
+          "room": "102",
           "raw": "4-Е, ЯДС"
         },
         {
@@ -21546,7 +21546,7 @@
           "classes": "2-Д",
           "subject": "УкМПШ",
           "group": "гр1",
-          "room": null,
+          "room": "005",
           "raw": "2-Д, УкМПШ, гр1"
         },
         {
@@ -21596,7 +21596,7 @@
           "classes": "2-Г",
           "subject": "УкМПШ",
           "group": "гр1",
-          "room": null,
+          "room": "009",
           "raw": "2-Г, УкМПШ, гр1"
         },
         {
@@ -21686,7 +21686,7 @@
           "classes": "2-А",
           "subject": "УкМПШ",
           "group": "гр2",
-          "room": null,
+          "room": "209",
           "raw": "2-А, УкМПШ, гр2"
         },
         {
@@ -21706,7 +21706,7 @@
           "classes": "2-Д",
           "subject": "УкМПШ",
           "group": "гр1",
-          "room": null,
+          "room": "005",
           "raw": "2-Д, УкМПШ, гр1"
         }
       ]
@@ -21761,7 +21761,7 @@
           "classes": "2-Д",
           "subject": "УкМПШ",
           "group": "гр2",
-          "room": null,
+          "room": "005",
           "raw": "2-Д, УкМПШ, гр2"
         },
         {
@@ -21811,7 +21811,7 @@
           "classes": "2-Д",
           "subject": "УкМПШ",
           "group": "гр2",
-          "room": null,
+          "room": "005",
           "raw": "2-Д, УкМПШ, гр2"
         },
         {
@@ -21916,7 +21916,7 @@
           "classes": "7-А",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "411",
           "raw": "7-А, АнглМ"
         },
         {
@@ -21966,7 +21966,7 @@
           "classes": "7-В",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "411",
           "raw": "7-В, АнглМ"
         },
         {
@@ -22016,7 +22016,7 @@
           "classes": "3-Г",
           "subject": "АнглМ",
           "group": "гр2",
-          "room": null,
+          "room": "411",
           "raw": "3-Г, АнглМ, гр2"
         },
         {
@@ -22056,7 +22056,7 @@
           "classes": "7-Г",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "411",
           "raw": "7-Г, АнглМ"
         },
         {
@@ -22106,7 +22106,7 @@
           "classes": "3-Б",
           "subject": "АнглМ",
           "group": "гр2",
-          "room": null,
+          "room": "411",
           "raw": "3-Б, АнглМ, гр2"
         },
         {
@@ -22201,7 +22201,7 @@
           "classes": "6-А",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "108",
           "raw": "6-А, АнглМ"
         },
         {
@@ -22251,7 +22251,7 @@
           "classes": "6-В",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "108",
           "raw": "6-В, АнглМ"
         },
         {
@@ -22291,7 +22291,7 @@
           "classes": "3-А",
           "subject": "АнглМ",
           "group": "гр2",
-          "room": null,
+          "room": "108",
           "raw": "3-А, АнглМ, гр2"
         },
         {
@@ -22341,7 +22341,7 @@
           "classes": "6-Е",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "108",
           "raw": "6-Е, АнглМ"
         },
         {
@@ -22381,7 +22381,7 @@
           "classes": "9-Г",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "108",
           "raw": "9-Г, АнглМ"
         },
         {
@@ -22421,7 +22421,7 @@
           "classes": "9-В",
           "subject": "АнглМ",
           "group": null,
-          "room": null,
+          "room": "108",
           "raw": "9-В, АнглМ"
         },
         {
@@ -22576,7 +22576,7 @@
           "classes": "1-Г",
           "subject": "УкМПШ",
           "group": "гр2",
-          "room": null,
+          "room": "208",
           "raw": "1-Г, УкМПШ, гр2"
         },
         {
@@ -23011,7 +23011,7 @@
           "classes": "11-Б",
           "subject": "Астр",
           "group": null,
-          "room": null,
+          "room": "304",
           "raw": "11-Б, Астр"
         },
         {
@@ -23081,7 +23081,7 @@
           "classes": "9-Д",
           "subject": "Фізика",
           "group": null,
-          "room": null,
+          "room": "304",
           "raw": "9-Д, Фізика"
         },
         {
@@ -23111,7 +23111,7 @@
           "classes": "9-Е",
           "subject": "Фізика",
           "group": null,
-          "room": null,
+          "room": "304",
           "raw": "9-Е, Фізика"
         },
         {
@@ -23216,7 +23216,7 @@
           "classes": "6-Е",
           "subject": "Інф",
           "group": null,
-          "room": null,
+          "room": "415",
           "raw": "6-Е, Інф"
         },
         {
@@ -23266,7 +23266,7 @@
           "classes": "6-Г",
           "subject": "Інф",
           "group": null,
-          "room": null,
+          "room": "415",
           "raw": "6-Г, Інф"
         },
         {
@@ -23306,7 +23306,7 @@
           "classes": "6-Д",
           "subject": "Інф",
           "group": null,
-          "room": null,
+          "room": "313",
           "raw": "6-Д, Інф"
         },
         {
@@ -23366,7 +23366,7 @@
           "classes": "5-Г",
           "subject": "Інф",
           "group": null,
-          "room": null,
+          "room": "415",
           "raw": "5-Г, Інф"
         }
       ]
