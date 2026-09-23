@@ -44,12 +44,15 @@ async function createEvents(request: Request) {
   const auth = cookie(request, 'calendar_auth')
   if (!auth) return json({ error: 'Спершу підтвердьте доступ до Google Calendar.' }, 401)
   const token = JSON.parse(decoder.decode(Uint8Array.from(atob(auth.replace(/-/g, '+').replace(/_/g, '/')), (char) => char.charCodeAt(0)))) as { access_token: string }
-  const events = await request.json<Array<{ summary: string, description: string, start: string, end: string }>>()
+  const events = await request.json<Array<{ summary: string, description: string, start: string, end: string, recurrence: string[] }>>()
   if (!Array.isArray(events) || events.length > 500) return json({ error: 'Invalid calendar event payload.' }, 400)
   let created = 0
   for (const event of events) {
-    const response = await fetch(CALENDAR_URL, { method: 'POST', headers: { Authorization: `Bearer ${token.access_token}`, 'Content-Type': 'application/json' }, body: JSON.stringify({ summary: event.summary, description: event.description, start: { dateTime: event.start, timeZone: 'Europe/Kyiv' }, end: { dateTime: event.end, timeZone: 'Europe/Kyiv' } }) })
-    if (!response.ok) return json({ error: `Google Calendar rejected an event after ${created} successful creations.` }, 502)
+    const response = await fetch(CALENDAR_URL, { method: 'POST', headers: { Authorization: `Bearer ${token.access_token}`, 'Content-Type': 'application/json' }, body: JSON.stringify({ summary: event.summary, description: event.description, start: { dateTime: event.start, timeZone: 'Europe/Kyiv' }, end: { dateTime: event.end, timeZone: 'Europe/Kyiv' }, recurrence: event.recurrence }) })
+    if (!response.ok) {
+      const details = await response.text()
+      return json({ error: `Google Calendar rejected series ${created + 1}: ${details.slice(0, 300)}` }, 502)
+    }
     created++
   }
   return json({ created })

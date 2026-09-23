@@ -3,7 +3,7 @@ export type DayKey = 'пн' | 'вт' | 'ср' | 'чт' | 'пт'
 export interface Lesson {
   day: DayKey
   lesson: number
-  week: string | null
+  week: 'A' | 'B' | null
   classes: string
   subject: string
   group: string | null
@@ -27,4 +27,5 @@ export interface CalendarEvent {
   description: string
   start: string
   end: string
+  recurrence: string[]
 }

@@ -87,28 +87,39 @@ function weekRangeLabel(weekStart: string) {
   return `${format.format(start)} – ${format.format(end)}`
 }
 
+function dayForLesson(lesson: Lesson, from: string, to: string, expectedWeek: 'A' | 'B' | null) {
+  const date = new Date(`${from}T12:00:00Z`)
+  const limit = new Date(`${to}T12:00:00Z`)
+  while (date <= limit) {
+    if (date.getUTCDay() === WEEK_DAYS[lesson.day]) {
+      const weekStart = WEEK_STARTS.find((start) => dateValue(date) >= start && dateValue(date) <= dateValue(new Date(new Date(`${start}T12:00:00Z`).getTime() + (start === SEMESTER_START ? 3 : 4) * 86_400_000)))
+      if (!isHoliday(date) && (!expectedWeek || weekTypeFor(weekStart ?? SEMESTER_START) === expectedWeek)) return dateValue(date)
+    }
+    date.setUTCDate(date.getUTCDate() + 1)
+  }
+  return null
+}
+
 function createEvents(teacher: Teacher): CalendarEvent[] {
   const events: CalendarEvent[] = []
-  const start = new Date(`${SEMESTER_START}T12:00:00Z`)
-  const end = new Date(`${SEMESTER_END}T12:00:00Z`)
 
   for (const lesson of teacher.lessons) {
-    const classDate = new Date(start)
-    classDate.setUTCDate(start.getUTCDate() + ((WEEK_DAYS[lesson.day] - start.getUTCDay() + 7) % 7))
     const startTime = BELL_TIMES[lesson.lesson - 1]
     const endTime = addMinutes(startTime, lessonDuration(lesson.classes))
-    while (classDate <= end) {
-      const date = dateValue(classDate)
-      const weekType = weekTypeFor(WEEK_STARTS.find((weekStart) => date >= weekStart && date <= dateValue(new Date(new Date(`${weekStart}T12:00:00Z`).getTime() + (weekStart === SEMESTER_START ? 3 : 4) * 86_400_000))) ?? SEMESTER_START)
-      if (!isHoliday(classDate) && weekType && isLessonInWeek(lesson, weekType)) {
+    const ranges = lesson.week
+      ? [[SEMESTER_START, '2026-10-23'], ['2026-11-02', SEMESTER_END]]
+      : [[SEMESTER_START, '2026-10-23'], ['2026-11-02', SEMESTER_END]]
+    for (const [from, to] of ranges) {
+      const date = dayForLesson(lesson, from, to, lesson.week)
+      if (date) {
         events.push({
           summary: `${lesson.subject} · ${lesson.classes}${lesson.group ? ` (${lesson.group})` : ''}`,
           description: [`Викладач: ${teacher.name}`, `Урок ${lesson.lesson}`, `Тривалість: ${lessonDuration(lesson.classes)} хв`, lesson.room ? `Кабінет: ${lesson.room}` : null, lesson.week ? `Тиждень: ${lesson.week === 'A' ? 'чисельник' : 'знаменник'}` : null].filter(Boolean).join('\n'),
           start: `${date}T${startTime}:00+03:00`,
           end: `${date}T${endTime}:00+03:00`,
+          recurrence: [`RRULE:FREQ=WEEKLY;INTERVAL=${lesson.week ? 2 : 1};UNTIL=${to.replaceAll('-', '')}T235959Z`],
         })
       }
-      classDate.setUTCDate(classDate.getUTCDate() + 7)
     }
   }
   return events
@@ -199,7 +210,7 @@ export function App() {
       {calendarOpen && <div className="modal-backdrop" role="presentation"><section className="calendar-modal" role="dialog" aria-modal="true" aria-labelledby="calendar-title">
         <button className="close" onClick={() => setCalendarOpen(false)} aria-label="Закрити"><X size={20} /></button>
         <Mail className="modal-icon" size={25} /><p className="eyebrow">Google Calendar</p><h2 id="calendar-title">Додати уроки до календаря</h2>
-        <p>Ви підтвердите доступ у своєму обліковому записі Google. Ми створимо {totalEvents} подій на період 01.09–18.12.2026, крім канікул 26–30 жовтня. Час початку взято з розкладу дзвінків; тривалість залежить від класу.</p>
+        <p>Ви підтвердите доступ у своєму обліковому записі Google. Ми створимо {totalEvents} повторюваних серій уроків на період 01.09–18.12.2026, крім канікул 26–30 жовтня. Час початку взято з розкладу дзвінків; тривалість залежить від класу.</p>
         <form onSubmit={beginCalendarImport}>
           <label>Адреса Gmail<input type="email" required value={gmail} placeholder="name@gmail.com" onChange={(event) => setGmail(event.target.value)} /></label>
           <button className="confirm" type="submit">Продовжити з Google <CalendarPlus size={18} /></button>
